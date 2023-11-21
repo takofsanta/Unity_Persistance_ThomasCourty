@@ -6,9 +6,17 @@ public class PlayerCollision : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<ICollectible>() != null)
+        ICollectible iCollect = other.GetComponent<ICollectible>();
+        if (iCollect != null)
         {
-            other.GetComponent<ICollectible>().Collect();
+            iCollect.Collect();
+        }
+
+        ITalk talking = other.GetComponent<ITalk>();
+        if (talking != null )
+        {
+            talking.Talk();
         }
     }
+
 }
