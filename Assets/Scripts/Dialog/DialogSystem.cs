@@ -8,6 +8,9 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private DialogDatas _DialogDatas;
     [SerializeField] private UIDialogLong _UIDialog;
     [SerializeField] private UIDialogAnswer _UIDialogAnswer;
+
+    [SerializeField] private QuestDatas _QuestDatas;
+    [SerializeField] private UIQuest _UIQuest;
     private int actualSentence;
 
     public void StartTalking(int DialogSentenceNumber)
@@ -20,10 +23,15 @@ public class DialogSystem : MonoBehaviour
         string[] answers = new string[2];
         for (int i = 0; i < answers.Length; i++)
         {
+            if (_DialogDatas.Sentences[DialogSentenceNumber].QuestStarted)
+            {
+                _QuestDatas.StartQuest();
+                _UIQuest.ShowQuest(_QuestDatas.Objectives);
+
+            }
             if (actualSentence == 7) 
             {
                 _UIDialog.HideDialog();
-
             }
             if (answerNumbers[i] != -1)
             {

@@ -9,6 +9,7 @@ public class QuestDatas : ScriptableObject
     public bool IsStarted;
     public bool IsFinished;
 
+
     public void CheckQuest() 
     {
         bool result = true;
@@ -28,6 +29,7 @@ public class QuestDatas : ScriptableObject
     public void StartQuest()
     {
         IsStarted = true;
+
     }
     public void EndQuest()
     {
