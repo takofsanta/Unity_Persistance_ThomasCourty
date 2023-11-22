@@ -49,8 +49,8 @@ MonoBehaviour:
     ShortSentences: Rien
     LongSentences: "Rien merci, \xE0 la prochaine"
     CharacterSpeaking: Joueur
-    EndSentences: 1
-    Answer1: -1
+    EndSentences: 0
+    Answer1: 7
     Answer2: -1
     QuestStarted: 0
   - Index: 5
@@ -66,6 +66,14 @@ MonoBehaviour:
     LongSentences: OK va miner alors !
     CharacterSpeaking: PNJ
     EndSentences: 0
+    Answer1: 7
+    Answer2: -1
+    QuestStarted: 1
+  - Index: 7
+    ShortSentences: Ciao
+    LongSentences: 
+    CharacterSpeaking: Joueur
+    EndSentences: 1
     Answer1: -1
     Answer2: -1
     QuestStarted: 0

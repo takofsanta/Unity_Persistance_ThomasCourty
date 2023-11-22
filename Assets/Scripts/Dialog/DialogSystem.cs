@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,20 @@ public class DialogSystem : MonoBehaviour
         string[] answers = new string[2];
         for (int i = 0; i < answers.Length; i++)
         {
+            if (actualSentence == 7) 
+            {
+                _UIDialog.HideDialog();
+
+            }
             if (answerNumbers[i] != -1)
             {
                 answers[i] = _DialogDatas.Sentences[answerNumbers[i]].ShortSentences;
+
             }
             else
             {
                 answers[i] = "";
+
             }
         }
 
