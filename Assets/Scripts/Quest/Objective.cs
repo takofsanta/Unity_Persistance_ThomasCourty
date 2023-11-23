@@ -7,7 +7,7 @@ using UnityEngine;
 public class ObjectiveDatas : ScriptableObject
 {
     public string Name;
-    public int StartValue;
+    public int NumberValue;
     public int MaxValue;
     public int ActualValue;
     public string CollectibleType;

@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &33109328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1009,6 +1009,7 @@ MonoBehaviour:
   _Objective1: {fileID: 1117136800}
   _Objective2: {fileID: 630141433}
   _Objective3: {fileID: 1040824789}
+  Objectives: []
 --- !u!1 &630141431
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using static ScoreData;
 
 [CreateAssetMenu(menuName = "New Quest")]
 
@@ -8,6 +9,9 @@ public class QuestDatas : ScriptableObject
     public ObjectiveDatas[] Objectives;
     public bool IsStarted;
     public bool IsFinished;
+    public delegate void QuestUpdate(int value);
+    public static event QuestUpdate OnUpdate;
+
 
 
     public void CheckQuest() 
@@ -43,6 +47,7 @@ public class QuestDatas : ScriptableObject
             if (Objectives[NumObject].ActualValue >= Objectives[NumObject].MaxValue)
             {
                 Objectives[NumObject].IsFinished = true;
+                OnUpdate?.Invoke(Objectives[NumObject].NumberValue);
                 CheckQuest();
             }
         }
@@ -62,4 +67,5 @@ public class QuestDatas : ScriptableObject
         }
 
     }
+
 }
