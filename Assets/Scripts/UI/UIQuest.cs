@@ -25,20 +25,33 @@ public class UIQuest : MonoBehaviour
 
     private void OnEnable()
     {
-        ScoreData.OnUpdate += MiseEnFormeQuest;
+        QuestDatas.OnUpdate += MiseEnFormeQuest;
+        MiseEnFormeQuest(1);
     }
 
     private void OnDisable()
     {
-        ScoreData.OnUpdate -= MiseEnFormeQuest;
+        QuestDatas.OnUpdate -= MiseEnFormeQuest;
     }
     public void MiseEnFormeQuest(int numberValue)
     {
-        if (Objectives[numberValue].IsFinished == true)
+        
+        if (Objectives[0].IsFinished == true)
         {
-            _Objective1.text = "Finished";
-            _Objective2.text = "Finished";
-            _Objective3.text = "Finished";
+            _Objective1.text = "Terminé";
         }
+
+        if (Objectives[1].IsFinished == true)
+        {
+            _Objective2.text = "Terminé";
+
+        }
+
+        if (Objectives[2].IsFinished == true)
+        {
+            _Objective3.text = "Terminé";
+
+        }
+
     }
 }

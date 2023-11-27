@@ -47,7 +47,7 @@ public class QuestDatas : ScriptableObject
             if (Objectives[NumObject].ActualValue >= Objectives[NumObject].MaxValue)
             {
                 Objectives[NumObject].IsFinished = true;
-                OnUpdate?.Invoke(Objectives[NumObject].NumberValue);
+                OnUpdate?.Invoke(1);
                 CheckQuest();
             }
         }
