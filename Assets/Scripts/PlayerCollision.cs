@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    [SerializeField] private LevelManager _levelManager;
     private void OnTriggerEnter(Collider other)
     {
         ICollectible iCollect = other.GetComponent<ICollectible>();
@@ -16,6 +17,11 @@ public class PlayerCollision : MonoBehaviour
         if (talking != null )
         {
             talking.Talk();
+        }
+
+        if (other.CompareTag("LevelChanger"))
+        {
+            _levelManager.WalkPortal();
         }
     }
 

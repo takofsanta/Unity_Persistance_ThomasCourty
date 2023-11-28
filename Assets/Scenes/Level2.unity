@@ -708,6 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e222c0f1ccb6e246bd302b368a48e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelManager: {fileID: 1970305161}
 --- !u!1 &408000426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2485,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: d374a0d1278b3114283795ca5bf186f6, type: 2}
+  Play: {fileID: 0}
+  Portal: {fileID: 0}
+  _scoreData: {fileID: 11400000, guid: d374a0d1278b3114283795ca5bf186f6, type: 2}
+  _questData: {fileID: 11400000, guid: da1ff7c236653cc45bd92289754e0c4a, type: 2}
+  _valueNull: 0
 --- !u!4 &1970305162
 Transform:
   m_ObjectHideFlags: 0

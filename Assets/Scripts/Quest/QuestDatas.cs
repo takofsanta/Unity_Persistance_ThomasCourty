@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using static ScoreData;
 
@@ -68,4 +69,8 @@ public class QuestDatas : ScriptableObject
 
     }
 
+    internal void UpdateObjective(LevelManager levelManager)
+    {
+        throw new NotImplementedException();
+    }
 }
