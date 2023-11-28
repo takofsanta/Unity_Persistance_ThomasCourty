@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Minerai de Fer
   NumberValue: 1
   MaxValue: 1
-  ActualValue: 9
+  ActualValue: 0
   CollectibleType: Fer
   IsFinished: 0

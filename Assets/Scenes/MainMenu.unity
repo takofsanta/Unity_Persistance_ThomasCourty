@@ -644,6 +644,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: d374a0d1278b3114283795ca5bf186f6, type: 2}
   Play: {fileID: 2091171908}
+  Portal: {fileID: 0}
+  Objectives:
+  - {fileID: 11400000, guid: 9c21e3d76da90b44281de62d1bda112a, type: 2}
+  - {fileID: 11400000, guid: 40b4129824de8264ea0a7c948c66416f, type: 2}
+  - {fileID: 11400000, guid: 0a11acb7ef27e5a418321179b76334f2, type: 2}
+  _questData: {fileID: 11400000, guid: da1ff7c236653cc45bd92289754e0c4a, type: 2}
+  _scoreData: {fileID: 11400000, guid: d374a0d1278b3114283795ca5bf186f6, type: 2}
 --- !u!4 &1970305162
 Transform:
   m_ObjectHideFlags: 0

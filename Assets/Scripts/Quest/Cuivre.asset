@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Minerai de cuivre
   NumberValue: 0
   MaxValue: 1
-  ActualValue: 5
+  ActualValue: 0
   CollectibleType: Cuivre
   IsFinished: 0

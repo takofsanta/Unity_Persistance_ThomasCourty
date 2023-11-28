@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Minerai d'Or
   NumberValue: 2
   MaxValue: 1
-  ActualValue: 25
+  ActualValue: 0
   CollectibleType: Or
   IsFinished: 0

@@ -16,10 +16,12 @@ public class UIQuest : MonoBehaviour
 
     public void ShowQuest(ObjectiveDatas[]objectives)
     {
+
         _QuestPanel.SetActive(true);
         _Objective1.text = objectives[0].Name;
         _Objective2.text = objectives[1].Name;
         _Objective3.text = objectives[2].Name;
+        MiseEnFormeQuest(0);
 
     }
 

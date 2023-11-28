@@ -1,6 +1,8 @@
 
 using System;
+using System.ComponentModel.Design;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static ScoreData;
 
 [CreateAssetMenu(menuName = "New Quest")]
@@ -12,7 +14,6 @@ public class QuestDatas : ScriptableObject
     public bool IsFinished;
     public delegate void QuestUpdate(int value);
     public static event QuestUpdate OnUpdate;
-
 
 
     public void CheckQuest() 
@@ -28,17 +29,24 @@ public class QuestDatas : ScriptableObject
         }
         if (result)
         {
-            EndQuest();
+            if (IsStarted == true)
+            {
+                EndQuest();
+            }
+
         }
     }
     public void StartQuest()
     {
         IsStarted = true;
-
+        CheckQuest();
     }
     public void EndQuest()
     {
         IsFinished = true;
+        Debug.Log("Bravo c'est gagné");
+        SceneManager.LoadScene(0);
+
     }
 
     public void CheckObjective(int NumObject)

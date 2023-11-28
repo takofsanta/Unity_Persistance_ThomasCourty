@@ -25,9 +25,7 @@ public class DialogSystem : MonoBehaviour
         {
             if (_DialogDatas.Sentences[DialogSentenceNumber].QuestStarted)
             {
-                _QuestDatas.StartQuest();
-                _UIQuest.ShowQuest(_QuestDatas.Objectives);
-
+                QuestValid();
             }
             if (actualSentence == 7) 
             {
@@ -46,6 +44,12 @@ public class DialogSystem : MonoBehaviour
         }
 
         _UIDialogAnswer.ShowAnswers(answers);
+    }
+
+    public void QuestValid()
+    {
+        _QuestDatas.StartQuest();
+        _UIQuest.ShowQuest(_QuestDatas.Objectives);
     }
 
     public void SelectAnswer(int answerNumber)
